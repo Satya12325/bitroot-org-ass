@@ -1,23 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Cards from './Components/Cards';
+import {useState,useEffect} from "react";
+import CircularProgress from '@mui/material/CircularProgress';
 function App() {
+    const [data,setData] = useState([]);
+    const [load,setLoad,setState] = useState(false)
+  const getData = async () =>{
+    setLoad(true)
+    try{
+      const data = await fetch("https://my-json-server.typicode.com/Codeinwp/front-end-internship-api/posts");
+      const res = await data.json();
+      console.log(res);
+      setData(res);
+      setLoad(false)
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, [])
+  if(load){
+    return <div className="load"><CircularProgress color="success" /></div>
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        data?.map((item)=>(
+          <Cards
+          key={item.id}
+          large={item.thumbnail.large}
+          title={item.title}
+          content={item.content}
+          name={item.author.name}
+          role={item.author.role}
+          avatar={item.author.avatar}
+          />
+         
+        ))
+      }
     </div>
   );
 }

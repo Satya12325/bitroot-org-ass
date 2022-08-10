@@ -1,0 +1,63 @@
+.circleContainer {
+  display: flex;
+  gap: 0.5em;
+}
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #00bbd4;
+}
+.bgcolor {
+  background: #fec10b;
+}
+.bgImg{
+   color: #fff;
+   height: 140px;
+   width: 350px;
+}
+.bgImg > p {
+    color: transparent;
+}
+.hoverContainer {
+  height: 140px;  
+  width: 350px;
+  color: transparent;
+  position: absolute;
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+}
+.hoverContainer > p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.hoverContainer:hover {
+ 
+  background: linear-gradient(
+    183.49deg,
+    rgba(27, 27, 28, 0.24) 90%,
+    rgba(8, 8, 8, 0.24) 100%
+  );
+  backdrop-filter: blur(2px);
+  opacity: 5;
+  color: #fff;
+  cursor: pointer;
+}
+.poupImg {
+  width: 350px;
+  height: 200px;
+}
+.crossIcon {
+  color: rgb(204, 204, 204);
+  display: flex;
+  flex-direction: row-reverse;
+}
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
