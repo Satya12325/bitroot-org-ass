@@ -24,7 +24,11 @@ function App() {
     getData();
   }, [])
   if(load){
-    return <div className="load"><CircularProgress color="success" /></div>
+    return <div className="load"><div className="flex">
+    <div className ="spinner">
+    </div>
+    ...Looding
+    </div></div>
   }
   return (
     <div className="App">
