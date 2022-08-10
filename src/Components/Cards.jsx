@@ -21,9 +21,7 @@ const Cards = ({ title, content, large, name, role, avatar }) => {
     <div>
       <Card sx={{ maxWidth: 350,margin:"20px" }}>
         <div className="hoverContainer" 
-        // style={{background:`url(${large})`,width:"350px",height:"200px",
-        //             backgroundSize: "350px 250px",
-        //             backgroundRepeat: "no-repeat",}}
+       
         onClick={handleOpen}><p>Learn More</p></div>
         <CardMedia
           component="img"
@@ -32,17 +30,7 @@ const Cards = ({ title, content, large, name, role, avatar }) => {
           alt="green iguana"
         />
 
-        {/* <div
-          //    style={{background:`url(${large})`,width:"350px",height:"200px",
-          //             backgroundSize: "350px 250px",
-          //             backgroundRepeat: "no-repeat",}}
-
-          className="bgImg"
-        >
-          <img src={large} alt="green" />
-          <p>Learn More</p>
-        </div> */}
-
+        
         <CardContent>
           <Box className="circleContainer">
             <div className="circle"></div>

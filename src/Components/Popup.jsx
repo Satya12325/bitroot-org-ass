@@ -6,11 +6,7 @@ import Slide from "@mui/material/Slide";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
-import AddIcon from "@mui/icons-material/Add";
-import TextField from "@mui/material/TextField";
-import { v4 as uuidv4 } from "uuid";
-import PushPinIcon from "@mui/icons-material/PushPin";
+
 import CloseIcon from "@mui/icons-material/Close";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
