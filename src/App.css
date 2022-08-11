@@ -1,12 +1,26 @@
 .App{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 90%;
+    flex-wrap: wrap; */
+   
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
     margin-top: 50px;
     margin: auto;
    align-items: center;
 }
+@media screen and (max-width:1145px){
+   .App{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+   }
+   
+  }
 .spinner{
     border: 8px solid rgb(168, 163, 167);
     border-top: 8px solid rgb(76, 0, 255);
